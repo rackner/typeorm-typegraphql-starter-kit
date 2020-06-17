@@ -1,0 +1,6 @@
+- [ ] ADD base google and facebook SSO
+- [ ] Multi-file upload
+- [ ] Permissions on a admin/super-admin level
+- [ ] Validate, authorize, and scope all current functions
+- [ ] Update image
+- [ ] Allow setup with different entity types

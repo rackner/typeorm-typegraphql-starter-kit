@@ -1,0 +1,54 @@
+{
+  "name": "typeorm-typegraphql-starter-kit",
+  "author": "Jake Engel",
+  "version": "0.0.1",
+  "description": "Starter repository to setup a typeORM, apollo-server, postgres project.",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/helmet": "0.0.46",
+    "@types/jsonwebtoken": "^8.3.9",
+    "@types/node": "^13.13.5",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsconfig-paths": "^3.9.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.13.0",
+    "aws-sdk": "^2.673.0",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.0.0",
+    "class-validator": "^0.12.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.0.0",
+    "graphql-type-json": "^0.3.1",
+    "graphql-upload": "^10.0.0",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.25.3",
+    "pg": "^8.1.0",
+    "pluralize": "^8.0.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.0.0-rc.1",
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.24",
+    "typeorm-typedi-extensions": "^0.2.3"
+  },
+  "scripts": {
+    "start_local": "export NODE_ENV=dev && clear && tsnd --respawn --type-check --clear --no-deps --ignore-watch node_modules --ignore-watch .git --watch .env src/server.ts",
+    "start": "npm run start_local",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
